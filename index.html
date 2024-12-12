@@ -3,7 +3,6 @@
   <head>
     <title>Expert Credit</title>
    <style>
-    
       /* Общие стили */
         body {
             margin: 0;
@@ -21,7 +20,7 @@
             left: 10px;
             bottom: 10px;
             width: 150px;
-            height: 300px;
+            height: 350px;
             z-index: 1000;
             border: 2px solid #000;
             overflow: hidden;
@@ -45,25 +44,20 @@
         .control-btn {
             position: absolute;
             background: transparent; /* Прозрачный фон */
-            
-           
+            color: white;
+            border: none; /* Убираем рамки */
             padding: 5px;
             cursor: pointer;
             z-index: 2;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .sound-btn {
-            top: 10px;
+            bottom: 10px; /* Размещена внизу контейнера */
             left: 10px;
         }
 
         .minimize-btn {
-            top: 10px;
+            top: -20px; /* Чуть выше линии видео */
             right: 10px;
         }
 
@@ -80,6 +74,16 @@
             .video-container.minimized {
                 width: 40px;
                 height: 80px;
+            }
+
+            .sound-btn {
+                bottom: 5px;
+                left: 5px;
+            }
+
+            .minimize-btn {
+                top: -15px;
+                right: 5px;
             }
         }
   </style>
@@ -436,10 +440,10 @@
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
 
-<!-- Видео-контейнер -->
+ <!-- Видео-контейнер -->
     <div class="video-container" id="videoContainer">
         <video id="promoVideo" autoplay muted loop playsinline>
-            <source src="videoo.mp4" type="video/mp4">
+            <source src="your-video.mp4" type="video/mp4">
             Ваш браузер не поддерживает видео.
         </video>
         <!-- Кнопки управления -->
