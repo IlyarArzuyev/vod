@@ -3,7 +3,8 @@
   <head>
     <title>Expert Credit</title>
    <style>
-     /* Общие стили */
+    
+      /* Общие стили */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -19,8 +20,8 @@
             position: fixed;
             left: 10px;
             bottom: 10px;
-            width: 150px;
-            height: 250px;
+            width: 200px;
+            height: 400px;
             z-index: 1000;
             border: 2px solid #000;
             overflow: hidden;
@@ -59,6 +60,22 @@
         .minimize-btn {
             top: 10px;
             right: 10px;
+        }
+
+        /* Адаптация для мобильных устройств */
+        @media (max-width: 768px) {
+            .video-container {
+                width: 150px;
+                height: 300px;
+                left: 5px;
+                bottom: 5px;
+                border-radius: 20px;
+            }
+
+            .video-container.minimized {
+                width: 40px;
+                height: 80px;
+            }
         }
   </style>
     <meta name="format-detection" content="telephone=no">
@@ -416,7 +433,7 @@
 
 <!-- Видео-контейнер -->
     <div class="video-container" id="videoContainer">
-        <video id="promoVideo" autoplay loop>
+        <video id="promoVideo" autoplay muted loop playsinline>
             <source src="videoo.mp4" type="video/mp4">
             Ваш браузер не поддерживает видео.
         </video>
@@ -433,8 +450,7 @@
             const videoContainer = document.getElementById('videoContainer');
 
             // Изначально звук включен
-            video.muted = false;
-            let isMuted = false;
+            let isMuted = true;
 
             // Переключение звука
             soundToggleBtn.addEventListener('click', function() {
