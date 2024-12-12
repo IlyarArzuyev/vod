@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Expert Credit</title>
+   <style>
+     /* Общие стили */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Основной контент сайта */
+        .content {
+            padding: 20px;
+        }
+
+        /* Стили для видео-контейнера */
+        .video-container {
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            width: 150px;
+            height: 250px;
+            z-index: 1000;
+            border: 2px solid #000;
+            overflow: hidden;
+            border-radius: 30px; /* Обрезанные края */
+            transition: width 0.3s, height 0.3s;
+        }
+
+        .video-container.minimized {
+            width: 50px;
+            height: 100px;
+        }
+
+        /* Стили для видео */
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Увеличивает/уменьшает видео для полного заполнения контейнера */
+        }
+
+        /* Стили для кнопок управления */
+        .control-btn {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .sound-btn {
+            top: 10px;
+            left: 10px;
+        }
+
+        .minimize-btn {
+            top: 10px;
+            right: 10px;
+        }
+  </style>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/black digital square.jpg" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,700,800%7COswald:300,400,500">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="page">
+           <!-- Page Header-->
+      <header class="section page-header" data-type="anchor">
+        <!-- RD Navbar-->
+ <!-- Javascript-->
+    <script src="js/jquery.min.js"></script>
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-minimal" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-fixed" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
+                  <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="#home"><img src="images/logo-default-480x80.png" width="240" height="40" alt=""></a>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#home" lang" key="home">Главная</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#services" lang" key="services">Преимущества</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#about-us" lang" key="about">О нас</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#testimonials" lang" key="testimonials">Руководство</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#blog" lang" key="blog">Сопровождение</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#contact" lang" key="contact">Контакты</a>
+                      </li>
+              &nbsp;  <a href="kzsite.html"><img src="Kaz.png" width="50" 
+  height="50" alt="Пример"></a>
+              
+</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="swiper-container swiper-slider swiper-slider-minimal" id="home" data-loop="true" data-slide-effect="fade" data-autoplay="3500" data-simulate-touch="true">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-slide-bg="images/slider-minimal-slide-1-1920x888.jpg">
+            <div class="swiper-slide-caption">
+              <div class="container">
+                <div class="swiper-slide-text">
+                  <div class="text-large">Добро пожаловать</div>
+               </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-slide-bg="images/slider-minimal-slide-2-1920x888.jpg">
+            <div class="swiper-slide-caption">
+              <div class="container">
+                <div class="swiper-slide-text">
+                  <div class="text-large">Не переплачивай</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-slide-bg="images/slider-minimal-slide-3-1920x888.jpg">
+            <div class="swiper-slide-caption">
+              <div class="container">
+                <div class="swiper-slide-text">
+                  <div class="text-large">Выбирай лучшего брокера</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination-outer container">
+          <div class="swiper-pagination swiper-pagination-modern swiper-pagination-marked" data-index-bullet="true"></div>
+        </div>
+      </div>
+      <!-- Our Services-->
+     <section class="section section-lg text-center" id="services" data-type="anchor">
+        <div class="container">
+          <h3 class="wow-outer"><span class="wow slideInDown">Наши преимущества</span></h3>
+<p class="wow-outer"><span class="text-width-1 wow slideInDown">Конкурентные преимущества компании – это особенности, которые выделяют нашу компанию в глазах потенциальных клиентов.</span></p>
+          <div class="row row-50">
+            <div class="col-md-6 wow-outer">
+              <!-- Post Modern-->
+              <article class="post-modern wow slideInLeft"><img src="images/2.jpg" alt="" width="571" height="353"/>
+                <h4 class="post-modern-title">Почему выбрают нас?</a></h4>
+                <ul class="post-modern-meta">
+                
+                  <li>
+                  
+                <p>Мы занимаемся консультацией по оформлению ипотеки, мы на рынке более 2 лет. Наши эксперты имеют опыт в сфере оформления ипотеки более 7 лет. Мы эксперты высокого класса и знаем об ипотеке практически все. Более 10000клиентов получили ипотеку с помощью нас.</p>
+              </article>
+            </div>
+            <div class="col-md-6 wow-outer">
+              <!-- Post Modern-->
+              <article class="post-modern wow slideInLeft"><img src="images/1.jpg" alt="" width="571" height="353"/></a>
+                <h4 class="post-modern-title">5 шагов к заветной цели</a></h4>
+                <ul class="post-modern-meta">
+                  
+                <p>Наша компания занимается не только консультацией, но и полным сопровождением с подготовкой к ипотеке. Ведь покупка жилья — это очень важный шаг и необходимо отнестись к нему ответственно. Более того на рынке существуют более 23 ипотечных программ, которые отличаются между собой, как ставками кредитования, при этом есть возможность получения ипотеки как с ПВ, так и без ПВ, с подтверждением дохода так и без подтверждения дохода</p>
+              </article>
+            </div>
+          </div>
+        
+      </section>
+
+
+ 
+
+      <!-- A Few Words About Us-->
+      <section class="section section-lg bg-gray-100" id="about-us" data-type="anchor">
+        <div class="container">
+          <div class="row row-50 justify-content-center justify-content-lg-between">
+            <div class="col-md-10 col-lg-6 col-xl-5">
+
+ 
+
+              <h3 class="wow-outer"><span class="wow slideInDown">Немного о нас</span></h3>
+              <p class="wow-outer"><span class="wow slideInDown" data-wow-delay=".05s">Мы - компания <strong>Expert Credit</strong>.</span></p>
+              <p class="wow-outer"><span class="wow slideInDown" data-wow-delay=".1s">Наша команда состоит из бывших сотрудников банка, средний опыт которых составляет 7 лет. Мы уже выдали ипотеку более 10,000 клиентам. Благодаря нашему опыту и знаниям вы можете избежать риска получить отказ от Банка или оформить дорогой займ.</span></p>
+              <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInDown" data-wow-delay=".1s" href="tel:+77753181260">Позвонить нам</a></div>
+<div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInDown" data-wow-delay=".1s" href="https://wa.me/77753181260" target="_blank">Написать нам</a>
+</div>
+           </div>
+            <div class="col-md-10 col-lg-6 wow-outer"><img class="img-responsive wow slideInRight" src="images/large-features-2-570x368.png" alt="" width="270px">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button button-primary button-winona" href="https://www.instagram.com/kanat_expert/" target="_blank"">instagram</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Thin-->
+      <section class="section section-xs bg-primary-gradient text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-12">
+              <div class="box-cta-thin">
+                <h4 class="wow-outer"><span class="wow slideInRight">Не откладывай вопрос по ипотеке! <span class="font-weight-bold">Действуй сейчас! </span>Запишись на консультацию!</span></h4><a class="button button-primary button-winona" href="https://wa.me/77753181260" target="_blank">Записаться на консультацию</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+      <!-- Testimonials-->
+      <section class="section section-lg bg-gray-100" id="testimonials" data-type="anchor">
+        <div class="container">
+          <h3 class="text-center">Мастер класс от руководителя компании </h3>
+          <div class="row row-50 justify-content-center justify-content-lg-between">
+            <div class="col-md-10 col-lg-5">
+              <div class="owl-carousel" data-items="1" data-dots="true" data-nav="false" data-loop="true" data-margin="30" data-stage-padding="0" data-mouse-drag="false">
+                <div class="wow-outer">
+                  <blockquote class="quote-modern wow slideInLeft">
+                    <svg class="quote-modern-mark" x="0px" y="0px" width="35px" height="25px" viewbox="0 0 35 25">
+                      <path d="M27.461,10.206h7.5v15h-15v-15L25,0.127h7.5L27.461,10.206z M7.539,10.206h7.5v15h-15v-15L4.961,0.127h7.5                L7.539,10.206z"></path>
+                    </svg>
+                    <div class="quote-modern-text">
+                      <p>Привлечение брокера позволяет оформить кредит на более выгодных условиях (это объясняется тем, что многие компании тесно сотрудничают с банками). Несмотря на рекламные акции и лояльность, многие банки неохотно кредитуют некоторые категории заемщиков (ИП, самозанятых или фрилансеров), поскольку считают их рисковыми клиентами. Именно в этих случаях брокер поможет получить кредит на покупку жилья. По статистике, до 95 % заявок, направленных брокерскими компаниями, получают одобрение.</p>
+                    </div>
+                    <div class="quote-modern-meta">
+                      <div class="quote-modern-avatar"><img src="images/testimonials-person-2-96x96.jpg" alt="" width="96" height="96"/>
+                      </div>
+                      <div class="quote-modern-info">
+                        <cite class="quote-modern-cite">Канат Бершинбаев</cite>
+                        <p class="quote-modern-caption">Руководитель</p>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+                 
+<div class="wow-outer">
+                  <blockquote class="quote-modern wow slideInLeft">
+                    <svg class="quote-modern-mark" x="0px" y="0px" width="35px" height="25px" viewbox="0 0 35 25">
+                      <path d="M27.461,10.206h7.5v15h-15v-15L25,0.127h7.5L27.461,10.206z M7.539,10.206h7.5v15h-15v-15L4.961,0.127h7.5                L7.539,10.206z"></path>
+                    </svg>
+                    <div class="quote-modern-text">
+                      <p>Снижение ставки по ипотеке – опять же благодаря тесному сотрудничеству с банком это возможно. В этом случае снижение ставки даже на 1 % обернется в будущем экономией на сотни тысяч тенге.</p>
+                    </div>
+                    <div class="quote-modern-meta">
+                      <div class="quote-modern-avatar"><img src="images/testimonials-person-2-96x96.jpg" alt="" width="96" height="96"/>
+                      </div>
+                      <div class="quote-modern-info">
+                        <cite class="quote-modern-cite">Канат Имангалиулы</cite>
+                        <p class="quote-modern-caption">Зам руководителя</p>
+                      </div>
+                    </div>
+                  </blockquote>
+                </div>
+                <div class="wow-outer">
+                  <blockquote class="quote-modern wow slideInLeft">
+                    <svg class="quote-modern-mark" x="0px" y="0px" width="35px" height="25px" viewbox="0 0 35 25">
+                      <path d="M27.461,10.206h7.5v15h-15v-15L25,0.127h7.5L27.461,10.206z M7.539,10.206h7.5v15h-15v-15L4.961,0.127h7.5                L7.539,10.206z"></path>
+                    </svg>
+                    <div class="quote-modern-text">
+                      <p>Просрочки по ипотечному кредиту обычно оборачиваются реализацией залогового имущества. В случае привлечения брокера удается качественно урегулировать этот вопрос в досудебном порядке (отсрочка платежей, либо рефинансирование в другом банке).</p>
+                    </div>
+                    <div class="quote-modern-meta">
+                      <div class="quote-modern-avatar"><img src="images/testimonials-person-2-96x96.jpg" alt="" width="96" height="96"/>
+                      </div>
+                      <div class="quote-modern-info">
+                        <cite class="quote-modern-cite">Абзал Асетулы</cite>
+                        <p class="quote-modern-caption">Аналитик</p>
+                      </div>
+                    </div>
+                  </blockquote>
+
+
+
+                </div> 
+              </div>
+            </div>
+            <div class="col-md-10 col-lg-6 wow-outer">
+              <div class="thumbnail-video-1 bg-gray-700 wow slideInLeft">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/AyUpzjtdoRc?si=B_MStvHkeyiUdnHg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Pricing-->
+     
+            
+     
+      <!-- Latest Blog Posts-->
+      <section class="section section-lg text-center" id="blog" data-type="anchor">
+        <div class="container">
+          <h3 class="wow-outer"><span class="wow slideInDown">Наше сопровождение</span></h3>
+          <div class="row row-50">
+            <div class="col-md-6 wow-outer">
+              <!-- Post Modern-->
+              <article class="post-modern wow slideInLeft"><img src="images/5.jpg" alt="" width="571" height="353"/>
+                <h4 class="post-modern-title">Самый большой плюс ипотеки:</a></h4>
+                <ul class="post-modern-meta">
+                  
+                <p>Покупка недвижимости спомощью кредита дает ценную возможность улучшить жилищные условия. 
+Это главное преимущество ипотеки. Конечно, вы можете снимать чужую квартиру и копить деньги всю жизнь, но в итоге вы переплатите 
+и потеряете свою квартиру в конце жизни.Есть также вариант копить деньги самому, но при этом квартира может вырасти в цене, 
+а ваши средства обесцениться, пока выбудете копить необходимую сумму.
+              </article>
+            </div>
+            <div class="col-md-6 wow-outer">
+              <!-- Post Modern-->
+               <article class="post-modern wow slideInLeft"><img src="images/6.jpg" alt="" width="571" height="353"/>
+                <h4 class="post-modern-title">Самый большой плюс ипотеки:</a></h4>
+                <ul class="post-modern-meta">
+                  
+                <p>Покупка недвижимости спомощью кредита дает ценную возможность улучшить жилищные условия. 
+Это главное преимущество ипотеки. Конечно, вы можете снимать чужую квартиру и копить деньги всю жизнь, но в итоге вы переплатите 
+и потеряете свою квартиру в конце жизни.Есть также вариант копить деньги самому, но при этом квартира может вырасти в цене, 
+а ваши средства обесцениться, пока выбудете копить необходимую сумму.
+              </article>
+            </div>
+          </div>
+          <div class="wow-outer button-outer"><a class="button button-primary-outline button-winona wow slideInUp" href="https://wa.me/77753181260" target="_blank">Записаться на консультацию</a></div>
+        </div>
+      </section>
+      <!-- Contact Us-->
+      
+      <!-- Fullwidth Gallery -->
+     
+           <!-- Page Footer-->
+      <footer class="section footer-linked bg-gray-700">
+<div id="contact">
+        <div class="footer-linked-main">
+          <div class="container">
+            <div class="row row-50">
+              <div class="col-lg-8">
+                <h4>Мы в соц.сетях</h4>
+                <hr class="offset-right-1">
+                <div class="row row-20">
+                  <div class="col-6 col-sm-3">
+                    <ul class="list list-xs">
+                      <li><a href="https://wa.me/77753181260" target="_blank"><i class="fa fa-whatsapp"> Whatsapp</i></a></li>
+                   
+
+ </ul>
+                  </div>
+                  <div class="col-6 col-sm-3">
+                    <ul class="list list-xs">
+                      <li><a href="https://www.facebook.com/people/%D0%91%D0%B5%D1%80%D1%88%D0%B8%D0%BD%D0%B1%D0%B0%D0%B5%D0%B2-%D0%9A%D0%B0%D0%BD%D0%B0%D1%82/100070191276638/" target="_blank"><i class="fa fa-facebook"> Facebook</a></i> </li>
+                     
+                    </ul>
+                  </div>
+                  <div class="col-6 col-sm-3">
+                    <ul class="list list-xs">
+                     <li> <a href="https://www.instagram.com/kanat_expert/" target="_blank"><i class="fa fa-instagram"> Instagram</i></a></li>
+                     
+                    </ul>
+                  </div>
+                  <div class="col-6 col-sm-3">
+                    <ul class="list list-xs">
+                      <li><a href="https://www.youtube.com/@kanat_expert" target="_blank"><i class="fa fa-youtube"> Youtube</i></a></li>
+                     
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-4">
+                <h4>Контактная информация</h4>
+                <hr>
+                <ul class="list-sm">
+                  <li class="object-inline"><span class="icon icon-md mdi mdi-map-marker text-gray-700"></span><a class="link-default" href="https://go.2gis.com/y727r" target="_blank">г.Алматы, ул Сатпаева 103/1 <br> БЦ Улжан 5 этаж</a></li>
+                  <li class="object-inline"><span class="icon icon-md mdi mdi-phone text-gray-700"></span>
+                    <ul class="list-0">
+                      <li><a class="link-default" href="tel:+77753181260">+77753181260</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="object-inline"><span class="icon icon-md mdi mdi-email text-gray-700"></span><a class="link-default" href="mailto:#" target="_blank">info@expert-credit.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-linked-aside">
+          <div class="container">
+            <!-- Rights-->
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>All Rights Reserved</span></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="preloader"> 
+      <div class="preloader-logo"><img src="images/logo-default-480x80.png" width="240" height="40" alt=""></div>
+      <div class="preloader-body">
+        <div id="loadingProgressG">
+          <div class="loadingProgressG" id="loadingProgressG_1"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+
+<!-- Видео-контейнер -->
+    <div class="video-container" id="videoContainer">
+        <video id="promoVideo" autoplay loop>
+            <source src="videoo.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <!-- Кнопки управления -->
+        <button id="soundToggle" class="control-btn sound-btn">🔊</button>
+        <button id="minimizeBtn" class="control-btn minimize-btn">-</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('promoVideo');
+            const soundToggleBtn = document.getElementById('soundToggle');
+            const minimizeBtn = document.getElementById('minimizeBtn');
+            const videoContainer = document.getElementById('videoContainer');
+
+            // Изначально звук включен
+            video.muted = false;
+            let isMuted = false;
+
+            // Переключение звука
+            soundToggleBtn.addEventListener('click', function() {
+                isMuted = !isMuted;
+                video.muted = isMuted;
+                soundToggleBtn.textContent = isMuted ? '🔊' : '🔈';
+            });
+
+            // Сворачивание/разворачивание видео
+            minimizeBtn.addEventListener('click', function() {
+                if (videoContainer.classList.contains('minimized')) {
+                    // Разворачиваем видео
+                    videoContainer.classList.remove('minimized');
+                    video.muted = isMuted; // Восстанавливаем предыдущее состояние звука
+                } else {
+                    // Сворачиваем видео
+                    videoContainer.classList.add('minimized');
+                    video.muted = true; // Отключаем звук при сворачивании
+                }
+            });
+        });
+    </script>
+    
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- coded by ragnar-->
+  </body>
+</html>
