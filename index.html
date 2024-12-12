@@ -97,6 +97,46 @@
                 right: -4px;
             }
         }
+
+     h1 {
+            text-align: center;
+        }
+      .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+      .input-error {
+            color: red;
+            font-size: 12px;
+        }
+     
   </style>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
@@ -375,7 +415,18 @@
         </div>
       </section>
       <!-- Contact Us-->
-      
+        <h1>Форма обратной связи</h1>
+
+    <div class="contact-form">
+        <form id="contactForm" action="https://formspree.io/f/xpwzebkk" method="POST">
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+            <input type="text" id="phone" name="phone" placeholder="Ваш номер телефона (например: 87777777777)" required>
+            <textarea id="message" name="message" placeholder="Ваше сообщение" rows="4" required></textarea>
+            <button type="submit">Отправить сообщение</button>
+        </form>
+        <div id="error-message" class="input-error"></div>
+    </div>
+      <br><br>
       <!-- Fullwidth Gallery -->
      
            <!-- Page Footer-->
@@ -491,6 +542,27 @@
                     video.muted = true; // Отключаем звук при сворачивании
                 }
             });
+        });
+    </script>
+    <script>
+        // Проверка правильности ввода номера телефона
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const phone = document.getElementById('phone').value;
+            const phonePattern = /^8\d{10}$/; // Проверка формата 87777777777
+
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.textContent = '';
+
+            // Если номер не соответствует формату
+            if (!phonePattern.test(phone)) {
+                errorMessage.textContent = 'Номер телефона должен быть в формате: 87777777777';
+                return;
+            }
+
+            // Если все поля заполнены правильно, отправляем форму
+            this.submit();
         });
     </script>
     
